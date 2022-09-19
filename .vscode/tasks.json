@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "更新",
+            "type": "shell",
+            "command": "git status && git pull -v --progress \"origin\" ",
+            "problemMatcher": []
+        },
+        {
+            "label": "提交到远程仓库",
+            "type": "shell",
+            "command": "git status && git push -v --progress \"origin\" ",
+            "problemMatcher": []
+        },
+        /*
+        {
+            "label": "更新&上传",
+            "type": "shell",
+            "command": "git pull -v --progress \"origin\" && git commit ${file} -m 补充说明commit命令 && git push -v --progress \"origin\" " ,
+            "problemMatcher": []
+        },
+        */
+        {
+            "label": "commit",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:commit /path:${workspaceFolder} /closeonend:0 & pull_push.bat",
+            "problemMatcher": []
+        },
+    ]
+}
